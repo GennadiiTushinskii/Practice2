@@ -8,7 +8,7 @@ public class Warrior extends Player{
 
     @Override
     public String getFullInfo() {
-        return hp + " " + level + " " + type + " " + weapon + " " + weapon + " " + armor;
+        return hp + " " + level + " " + type + " " + weapon + " " + armor;
     }
 
     @Override

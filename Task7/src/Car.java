@@ -20,7 +20,7 @@ public abstract class Car extends Transport{
         return fuel;
     }
 
-    public int getMaxPassenger(){
+    public int getMaxPassengers(){
         return maxPassengers;
     }
 }
