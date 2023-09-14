@@ -4,16 +4,16 @@ public class Square extends Quadrangle implements Figure{
     }
 
     public double getArea() {
-        return a*b;
+        return a * a;
     }
 
     public double getPerimeter() {
-        return 2*a+2*b;
+        return 4 * a;
     }
 
     @Override
     double getLargeDiagonal() {
-        return a*Math.sqrt(2);
+        return a * Math.sqrt(2);
     }
 
     @Override
