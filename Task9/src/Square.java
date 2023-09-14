@@ -3,11 +3,11 @@ public class Square extends Quadrangle implements Figure{
         super(a, a, color);
     }
 
-    public double getArea() {
+    public double area() {
         return a * a;
     }
 
-    public double getPerimeter() {
+    public double perimeter() {
         return 4 * a;
     }
 

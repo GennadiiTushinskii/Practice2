@@ -1,34 +1,35 @@
 public class Rhombuses extends Quadrangle implements Figure{
     double alpha, beta;
 
-    public Rhombuses(int a, String color, double alpha, double beta) {
+    public Rhombuses(int a, double alpha, double beta, String color) {
         super(a, a, color);
         this.alpha = alpha;
         this.beta = beta;
     }
 
     @Override
-    public double getArea() {   //S = (d1*d2)/2
-        double d1 = (a*(Math.sqrt(2-2*Math.cos(beta))));
-        double d2 = (a*(Math.sqrt(2-2*Math.cos(alpha))));
-        return (d1*d2)/2;
+    public double area() {   //S = (d1*d2)/2
+//        double d1 = (a*(Math.sqrt(2-2*Math.cos(Math.toRadians(beta)))));
+//        double d2 = (a*(Math.sqrt(2-2*Math.cos(Math.toRadians(alpha)))));
+//        return (d1*d2)/2;
+        return a * getHeight();
     }
 
     @Override
-    public double getPerimeter() {
-        return 2*a + 2*b;
+    public double perimeter() {
+        return 4*a;
     }
 
     @Override
     double getLargeDiagonal() {
-        double d1 = (a*(Math.sqrt(2-2*Math.cos(beta))));
-        double d2 = (a*(Math.sqrt(2-2*Math.cos(alpha))));
+        double d1 = (a*(Math.sqrt(2-2*Math.cos(Math.toRadians(beta)))));
+        double d2 = (a*(Math.sqrt(2-2*Math.cos(Math.toRadians(alpha)))));
         return Math.max(d1,d2);
     }
 
     @Override
     double getHeight() {
-        return a * Math.sin(alpha);
+        return a * Math.sin(Math.toRadians(alpha));
     }
 
     @Override
